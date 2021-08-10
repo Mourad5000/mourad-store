@@ -1,0 +1,36 @@
+@import "../../assets/styles/globalStyles.scss";
+@import "../../assets/styles/mixins.scss";
+
+.header-container {
+  @include flex($justify-content: space-between);
+  height: 50px;
+  box-shadow: $box-shadow;
+  padding: 0px $p-6;
+  @media only screen and (min-width: $desktop-query-1280) {
+      padding: 0px $p-12;
+  }
+  background-color: #F3F6F4;
+}
+
+.header__list {
+  width: 50%;
+  @include flex($justify-content: flex-start);
+}
+
+.list__item {
+  padding-right: $p-12;
+  color: $black;
+  text-decoration: none;
+}
+
+.list__item--active {
+  color: $light-blue;
+  font-style: oblique;
+}
+
+.header__logo {
+  height: 50%;
+  @media only screen and (min-width: $desktop-query-1280) {
+    height: 75%;
+}
+}
