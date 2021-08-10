@@ -2,10 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const menuItems = [
-  { name: "Register", route: "/santander" },
-  { name: "Prizes", route: "/prizes" },
-  { name: "Terms & conditions", route: "/terms" },
-  { name: "Login", route: "/login" },
+  { name: "Home", route: "/home" },
+  { name: "Cart", route: "/cart" },
+  { name: "Sales", route: "/sales" },
 ];
 
 function Header() {
