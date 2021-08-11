@@ -1,0 +1,57 @@
+@import "../../../assets/styles/globalStyles.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.products-container {
+  @include flex($flex-direction: column);
+}
+
+.products__relevant {
+    @include flex($flex-direction: column);
+    width: 100%;
+    background-color: $white;
+    padding-bottom: $p-42;
+  @media only screen and (min-width: $desktop-query-1280) {
+    @include flex($justify-content: space-between);
+  }
+}
+
+.relevant__texts {
+  width: 100%;
+  @include flex($flex-direction: column);
+
+  @media only screen and (min-width: $desktop-query-1280) {
+    @include flex($flex-direction: column, $justify-content: flex-start);
+    width: 40%;
+  }
+}
+
+.texts__title {
+  font-size: $text-20;
+  font-variant: small-caps;
+  padding: $p-6;
+}
+
+.texts__description {
+  font-size: $text-16;
+  padding-bottom: $p-8;
+}
+
+.texts__button {
+  @include flex();
+  width: 50%;
+}
+
+.relevant__img {
+    padding-top: $p-24;
+  width: 100%;
+  height: 140px;
+  @media only screen and (min-width: $desktop-query-1280) {
+    @include flex($justify-content: flex-end);
+    width: 60%;
+    height: 240px;
+  }
+}
+
+.img__cover-page {
+  height: 100%;
+}

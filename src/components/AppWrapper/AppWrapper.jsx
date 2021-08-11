@@ -5,8 +5,10 @@ import "./AppWrapper.scss";
 
 function AppWrapper({ children }) {
   return (
-    <div className="app-wrapper">
-      {children}
+    <div className="app-wrapper-container">
+      <div className="app-wrapper">
+        {children}
+      </div>
     </div>
   );
 }

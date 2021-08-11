@@ -34,3 +34,21 @@
     height: 75%;
 }
 }
+
+.header-cover{
+  @include flex();
+  background-image: url('../../assets/images/header-cover-image.jpg');
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 300px;
+  @media only screen and (min-width: $desktop-query-1280) {
+    height: 500px;
+}
+}
+
+.header-cover__title {
+  color: $white;
+}
+
+
