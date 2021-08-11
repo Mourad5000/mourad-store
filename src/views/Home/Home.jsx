@@ -6,7 +6,7 @@ import Loading from "../../components/Loading/Loading";
 import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
-import { getAllItems } from "../../redux/actions/homeActions/homeActions";
+import { getAllItems } from "../../redux/actions/HomeActions/homeActions";
 
 function Home() {
   const dispatch = useDispatch();

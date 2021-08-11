@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import homeActionTypes from "../actions/homeActions/homeActionTypes";
+import homeActionTypes from "../actions/HomeActions/homeActionTypes";
 
 export default function homeReducer(state = {}, action) {
   let newState = {};
