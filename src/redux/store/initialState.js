@@ -1,4 +1,6 @@
 export default {
-  items: [],
-  shopCard: [],
+  mainReducer: {
+    items: [],
+    shopCard: [],
+  },
 };
