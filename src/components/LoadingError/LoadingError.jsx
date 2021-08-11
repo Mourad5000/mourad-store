@@ -6,8 +6,8 @@ import loadingErrorIcon from "../../assets/images/loading-error-icon.svg";
 function LoadingError({ text }) {
   return (
     <div className="loading-error">
-      <img src={loadingErrorIcon} alt="Loading icon error" />
-      <p>{text}</p>
+      <img className="loading-error__img" src={loadingErrorIcon} alt="Loading icon error" />
+      <p className="loading-error__text">{text}</p>
     </div>
   );
 }

@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+// constants
+import errorMesages from "../../constants/errorMesages";
+
 // components
 import Loading from "../../components/Loading/Loading";
+import LoadingError from "../../components/LoadingError/LoadingError";
 import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
@@ -10,7 +14,7 @@ import { getAllItems, getOneItem } from "../../redux/actions/HomeActions/homeAct
 
 function Home() {
   const dispatch = useDispatch();
-  const { items, loadingItems } = useSelector(({ homeReducer }) => homeReducer);
+  const { items, loadingItems, itemsError } = useSelector(({ homeReducer }) => homeReducer);
 
   useEffect(() => {
     if (!items) {
@@ -29,7 +33,10 @@ function Home() {
           Loading our products. The wait is worth it :) "
           />
         ) : (
-          <HomeProducts handleClick={handleClick} />
+          <>
+            {itemsError && (<LoadingError text={errorMesages.GET_ALL_ITEMS_ERROR} />)}
+            {items && (<HomeProducts handleClick={handleClick} />)}
+          </>
         )
       }
     </>
