@@ -18,7 +18,7 @@ function Home() {
     }
   }, [items]);
   return (
-    <section>
+    <>
       {
         loadingItems ? (
           <Loading text="
@@ -28,7 +28,7 @@ function Home() {
           <HomeProducts />
         )
       }
-    </section>
+    </>
   );
 }
 

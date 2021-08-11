@@ -1,0 +1,53 @@
+@import "../../../assets/styles/globalStyles.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.product-container {
+  @include flex($flex-direction: column, $justify-content: space-between);
+  box-shadow: $box-shadow;
+  background-color: $white;
+  border-radius: $border-radius;
+  cursor: pointer;
+  height: 400px;
+  width: 250px;
+  padding: $p-32;
+  margin: $m-12;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.product__info {
+    @include flex($flex-direction: column, $justify-content: flex-start)
+}
+
+.info__img {
+  height: 75px;
+}
+
+.info__category {
+    margin-top: $m-12;
+    font-size: $text-16;
+    color: $light-blue;
+}
+
+.info__title{
+    margin-top: $m-8;
+    font-size: $text-20;
+    color: $black;
+}
+
+.product__price {
+    width: 100%;
+}
+
+.separator {
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background-color: $light-blue;
+    background-image: linear-gradient(to right, $white, $light-blue, $white);
+    margin-bottom:$m-6;
+}
+
+
