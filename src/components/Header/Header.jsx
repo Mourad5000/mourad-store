@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/logo.png";
 
 const menuItems = [
   { name: "Home", route: "/home" },

@@ -14,9 +14,7 @@ function Home() {
     }
   }, [items]);
   return (
-    <section>
-      <p>hola</p>
-    </section>
+    <section />
   );
 }
 
