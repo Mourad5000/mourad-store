@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import homeActionTypes from "../actions/homeActions/homeActionTypes";
 
-export default function mainReducer(state = {}, action) {
+export default function homeReducer(state = {}, action) {
   let newState = {};
   switch (action.type) {
     case homeActionTypes.GET_ITEMS_LOADING:

@@ -1,6 +1,7 @@
 export default {
-  mainReducer: {
-    items: "",
+  homeReducer: {
+    loadingItems: false,
+    items: null,
     shopCard: [],
   },
 };
