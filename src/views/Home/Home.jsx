@@ -22,6 +22,7 @@ function Home() {
     if (!items) {
       dispatch(getAllItems());
     }
+    // TODO: aqui despintar itemDetail
   }, [items]);
 
   function handleClick(id) {

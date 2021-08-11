@@ -11,13 +11,16 @@
 }
 
 .detail__img {
-    height: 300px;
+    height: 150px;
     margin-bottom: $m-12;
-
+    @media only screen and (min-width:$desktop-query-1280){
+        height: 300px;
+    }
 }
 
 .detail__text {
     font-size: $text-16;
+    margin-bottom: $m-12;
 }
 
 .highlight {

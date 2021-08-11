@@ -16,7 +16,6 @@ function ProductDetail() {
     if (!itemDetail) {
       dispatch(getAllItems());
       dispatch(getOneItem(id));
-      console.log("entro aqui");
     }
   }, [itemDetail]);
 
@@ -28,7 +27,15 @@ function ProductDetail() {
           <h1 className="detail__title">{itemDetail.title}</h1>
           <img className="detail__img" src={itemDetail.image} alt="Item" />
           <p className="detail__text">
-            <span className="detail__text highlight">Desctiption:</span>
+            <span className="detail__text highlight">Price: </span>
+            {itemDetail.price}
+          </p>
+          <p className="detail__text">
+            <span className="detail__text highlight">Category: </span>
+            {itemDetail.category}
+          </p>
+          <p className="detail__text">
+            <span className="detail__text highlight">Desctiption: </span>
             {itemDetail.description}
           </p>
         </div>
