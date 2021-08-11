@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // components
-import Loading from "../components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
+import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
-import { getAllItems } from "../redux/actions/homeActions/homeActions";
+import { getAllItems } from "../../redux/actions/homeActions/homeActions";
 
 function Home() {
   const dispatch = useDispatch();
@@ -24,11 +25,7 @@ function Home() {
           Loading our products. The wait is worth it :) "
           />
         ) : (
-          items?.map((item) => (
-            <div key={item.id}>
-              <p>{item.title}</p>
-            </div>
-          ))
+          <HomeProducts />
         )
       }
     </section>

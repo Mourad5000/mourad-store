@@ -6,7 +6,7 @@ import "./App.css";
 // components
 import Header from "./components/Header/Header";
 import AppWrapper from "./components/AppWrapper/AppWrapper";
-import Home from "./views/Home";
+import Home from "./views/Home/Home";
 
 function App() {
   return (
