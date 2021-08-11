@@ -20,6 +20,7 @@ export function getAllItems() {
       dispatch(getItemsLoading());
       const endPoint = "https://fakestoreapi.com/products";
       const { data } = await axios.get(endPoint);
+      console.log(data);
       dispatch(getAllItemsSucess(data));
     } catch (error) {
       console.log(error);
