@@ -6,7 +6,7 @@ import Loading from "../../components/Loading/Loading";
 import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
-import { getAllItems } from "../../redux/actions/HomeActions/homeActions";
+import { getAllItems, getOneItem } from "../../redux/actions/HomeActions/homeActions";
 
 function Home() {
   const dispatch = useDispatch();
@@ -17,6 +17,10 @@ function Home() {
       dispatch(getAllItems());
     }
   }, [items]);
+
+  function handleClick(id) {
+    dispatch(getOneItem(id));
+  }
   return (
     <>
       {
@@ -25,7 +29,7 @@ function Home() {
           Loading our products. The wait is worth it :) "
           />
         ) : (
-          <HomeProducts />
+          <HomeProducts handleClick={handleClick} />
         )
       }
     </>

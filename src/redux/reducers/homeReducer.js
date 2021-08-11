@@ -10,6 +10,13 @@ export default function homeReducer(state = {}, action) {
     case homeActionTypes.GET_ALL_ITEMS:
       newState = { ...state, items: action.items, loadingItems: false };
       break;
+    case homeActionTypes.GET_ALL_ITEMS_ERROR:
+      newState = { ...state, itemsError: action.error, loadingItems: false };
+      break;
+
+    case homeActionTypes.GET_ITEM_DETAIL:
+      newState = { ...state, itemDetail: action.item };
+      break;
     default:
       newState = state;
       break;

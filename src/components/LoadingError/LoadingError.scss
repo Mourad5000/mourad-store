@@ -1,0 +1,24 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+
+.loading-error {
+    @include flex($flex-direction: column);
+    margin: $m-12 0;
+    @media only screen and(min-width:$desktop-query-1280) {
+        @include flex();
+    }
+}
+
+.loading-error__img{
+    height: 30px;
+    margin-bottom: 12px;
+    @media only screen and(min-width:$desktop-query-1280) {
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+}
+
+.loading-error__text{
+    color: $light-red;
+    font-size: $text-24;
+}
