@@ -6,6 +6,7 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background-color: $grey;
     @media only screen and (min-width: $desktop-query-1280) {
         @include flex($align-items:flex-start);
     }
