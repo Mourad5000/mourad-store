@@ -24,12 +24,11 @@ function Home() {
           Loading our products. The wait is worth it :) "
           />
         ) : (
-          // items?.map((item) => (
-          //   <div key={item.id}>
-          //     <p>hola</p>
-          //   </div>
-          // ))
-          <p>render de la lista</p>
+          items?.map((item) => (
+            <div key={item.id}>
+              <p>{item.title}</p>
+            </div>
+          ))
         )
       }
     </section>
