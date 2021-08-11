@@ -1,0 +1,4 @@
+export default {
+  GET_ALL_ITEMS: "GET_ALL_ITEMS",
+  GET_ITEMS_LOADING: "GET_ITEMS_LOADING",
+};

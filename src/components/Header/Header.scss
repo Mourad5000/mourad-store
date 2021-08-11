@@ -5,7 +5,7 @@
   @include flex($justify-content: space-between);
   height: 50px;
   box-shadow: $box-shadow;
-  padding: 0px $p-6;
+  padding: 0px $p-8;
   @media only screen and (min-width: $desktop-query-1280) {
       padding: 0px $p-12;
   }
@@ -34,3 +34,27 @@
     height: 75%;
 }
 }
+
+.header-cover{
+  @include flex();
+  background-image: url('../../assets/images/header-cover-image.jpg');
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 300px;
+  background-color: $grey;
+  @media only screen and (min-width: $desktop-query-1280) {
+    height: 500px;
+}
+}
+
+.header-cover__title {
+  color: $white;
+  font-variant: all-small-caps;
+  font-size: $text-42;
+  @media only screen and (min-width: $desktop-query-1280) {
+   font-size: 55px;
+}
+}
+
+

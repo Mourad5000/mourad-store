@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/logo.png";
+// import cover from "../../assets/images/header-cover-image.jpg";
 
 const menuItems = [
   { name: "Home", route: "/home" },
@@ -13,20 +14,25 @@ const menuItems = [
 
 function Header() {
   return (
-    <header className="header-container">
-      <div className="header__list">
-        {menuItems.map((menuItem) => (
-          <NavLink
-            to={menuItem.route}
-            key={menuItem.name}
-            className="list__item"
-            activeClassName="list__item--active"
-          >
-            {menuItem.name}
-          </NavLink>
-        ))}
+    <header className="header">
+      <div className="header-container">
+        <div className="header__list">
+          {menuItems.map((menuItem) => (
+            <NavLink
+              to={menuItem.route}
+              key={menuItem.name}
+              className="list__item"
+              activeClassName="list__item--active"
+            >
+              {menuItem.name}
+            </NavLink>
+          ))}
+        </div>
+        <img className="header__logo" src={logo} alt="Atlas logo" />
       </div>
-      <img className="header__logo" src={logo} alt="Atlas logo" />
+      <div className="header-cover">
+        <h1 className="header-cover__title">Welcome to Atlas shop</h1>
+      </div>
     </header>
   );
 }

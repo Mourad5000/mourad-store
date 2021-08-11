@@ -1,0 +1,9 @@
+@import "../../../assets/styles/globalStyles.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+

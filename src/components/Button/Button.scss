@@ -1,0 +1,23 @@
+@import "../../assets/styles/globalStyles.scss";
+@import "../../assets/styles/mixins.scss";
+
+.primary-button {
+    @include flex();
+    border-radius: $border-radius;
+    padding: $p-4 $p-8;
+    background-color: transparent;
+    border: 1px solid $light-blue;
+    color:$light-blue;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-size: $text-14;
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+.is-secondary {
+    border: 1px solid $light-red;
+    color:$light-red;
+}

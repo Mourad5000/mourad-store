@@ -1,0 +1,16 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+
+.app-wrapper-container {
+    padding: $p-12 $p-16;
+    position: relative;
+    overflow: hidden;
+    background-color: $grey;
+    @media only screen and (min-width: $desktop-query-1280) {
+        @include flex($align-items:flex-start);
+    }
+}
+
+.app-wrapper {
+    max-width:$desktop-query-1280;
+}

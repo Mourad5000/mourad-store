@@ -1,0 +1,15 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+
+.loader {
+    @include flex($flex-direction:column)
+}
+
+.loader__spinner{
+    height: 80px;
+}
+
+.loader__text {
+    font-size: $text-20;
+    color: $black;
+}
