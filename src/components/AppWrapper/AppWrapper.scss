@@ -1,0 +1,15 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+
+.app-wrapper {
+    @include flex($flex-direction: column, $justify-content: flex-start);
+    flex: 1;
+    width: 100%;
+    padding: $p-12 $p-16;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @media only screen and (min-width:$desktop-query-1280){
+        max-width:$desktop-query-1280;
+    }
+}   

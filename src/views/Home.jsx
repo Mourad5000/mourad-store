@@ -6,8 +6,7 @@ import { getAllItems } from "../redux/actions/homeActions/homeActions";
 
 function Home() {
   const dispatch = useDispatch();
-  const { items } = useSelector(({ mainReducer }) => mainReducer);
-  console.log("hola");
+  const { items } = useSelector(({ homeReducer }) => homeReducer);
 
   useEffect(() => {
     if (!items) {
@@ -15,7 +14,9 @@ function Home() {
     }
   }, [items]);
   return (
-    <section />
+    <section>
+      <p>hola</p>
+    </section>
   );
 }
 

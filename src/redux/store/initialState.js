@@ -1,6 +1,6 @@
 export default {
   mainReducer: {
-    items: [],
+    items: "",
     shopCard: [],
   },
 };

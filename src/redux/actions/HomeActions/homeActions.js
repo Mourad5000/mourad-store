@@ -1,19 +1,21 @@
 import axios from "axios";
-// import { GET_ALL_ITEMS } from "./homeActionTypes";
+import homeActionTypes from "./homeActionTypes";
 
-// exportar esta funcion
+export function getAllItemsSucess(items) {
+  return {
+    type: homeActionTypes.GET_ALL_ITEMS,
+    items,
+  };
+}
+
 export function getAllItems() {
-  return async () => {
+  return async (dispatch) => {
     try {
       const endPoint = "https://fakestoreapi.com/products";
       const { data } = await axios.get(endPoint);
-      console.log(data);
+      dispatch(getAllItemsSucess(data));
     } catch (error) {
       console.log(error);
     }
   };
-}
-
-export function useless() {
-  return 1;
 }

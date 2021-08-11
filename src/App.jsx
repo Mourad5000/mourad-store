@@ -1,17 +1,21 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import Home from "./views/Home";
-
 import "./App.css";
+
+// components
+import Header from "./components/Header/Header";
+import AppWrapper from "./components/AppWrapper/AppWrapper";
+import Home from "./views/Home";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/home" component={Home} />
+        <AppWrapper>
+          <Route path="/home" component={Home} />
+        </AppWrapper>
       </Switch>
     </div>
   );
