@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 // constants
 import errorMesages from "../../constants/errorMesages";
@@ -14,6 +15,7 @@ import { getAllItems, getOneItem } from "../../redux/actions/HomeActions/homeAct
 
 function Home() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { items, loadingItems, itemsError } = useSelector(({ homeReducer }) => homeReducer);
 
   useEffect(() => {
@@ -24,6 +26,7 @@ function Home() {
 
   function handleClick(id) {
     dispatch(getOneItem(id));
+    history.push(`/productDetail/${id}`);
   }
   return (
     <>
