@@ -2,5 +2,24 @@
 @import '../../assets/styles/mixins.scss';
 
 .detail-container {
-    
+    @include flex($flex-direction:column);
+}
+
+.detail__title {
+    margin-bottom: $m-12;
+    font-size: $text-32;
+}
+
+.detail__img {
+    height: 300px;
+    margin-bottom: $m-12;
+
+}
+
+.detail__text {
+    font-size: $text-16;
+}
+
+.highlight {
+    color: $light-blue;
 }

@@ -53,7 +53,6 @@ export function getOneItem(id) {
     try {
       const endPoint = `https://fakestoreapi.com/products/${id}`;
       const { data } = await axios.get(endPoint);
-      console.log(data);
       dispatch(getItemSuccess(data));
     } catch (error) {
       dispatch(getItemError(error));
