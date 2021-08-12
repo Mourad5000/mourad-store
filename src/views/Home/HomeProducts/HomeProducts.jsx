@@ -17,7 +17,7 @@ function HomeProducts({ handleClick }) {
           items && (
           <div className="products-container">
             {items?.map((item) => (
-              <ProductCard product={item} handleClick={handleClick} />
+              <ProductCard key={item.id} product={item} handleClick={handleClick} />
             ))}
           </div>
           )

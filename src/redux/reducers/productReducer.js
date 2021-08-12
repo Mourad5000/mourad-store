@@ -12,6 +12,9 @@ export default function productReducer(state = {}, action) {
     case productActionTypes.GET_ITEM_DETAIL_ERROR:
       newState = { ...state, itemDetailError: action.error, loadingItem: false };
       break;
+    case productActionTypes.DELETE_ITEM_DETAIL:
+      newState = { ...state, itemDetail: "" };
+      break;
     default:
       newState = state;
       break;

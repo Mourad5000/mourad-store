@@ -12,12 +12,16 @@ import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
 import { getAllItems } from "../../redux/actions/HomeActions/homeActions";
-import { getOneItem } from "../../redux/actions/ProductActions/productActions";
+import { getOneItem, deleteItemDetail } from "../../redux/actions/ProductActions/productActions";
 
 function Home() {
   const dispatch = useDispatch();
   const history = useHistory();
   const { items, loadingItems, itemsError } = useSelector(({ homeReducer }) => homeReducer);
+
+  useEffect(() => {
+    dispatch(deleteItemDetail());
+  });
 
   useEffect(() => {
     if (!items) {

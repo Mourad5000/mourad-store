@@ -34,8 +34,8 @@ export function getOneItem(id) {
   };
 }
 
-// export function deleteItemDetail() {
-//   return {
-//     type: productActionTypes.DELETE_ITEM_DETAIL,
-//   };
-// }
+export function deleteItemDetail() {
+  return {
+    type: productActionTypes.DELETE_ITEM_DETAIL,
+  };
+}
