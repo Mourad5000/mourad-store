@@ -7,6 +7,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import AppWrapper from "./components/AppWrapper/AppWrapper";
 import Home from "./views/Home/Home";
+import ProductDetail from "./views/ProductDetail/ProductDetail";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <AppWrapper>
           <Route path="/home" component={Home} />
+          <Route path="/productDetail/:id" component={ProductDetail} />
         </AppWrapper>
       </Switch>
     </div>

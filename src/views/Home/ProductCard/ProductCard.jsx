@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React from "react";
 import PropTypes from "prop-types";
 
 import "./ProductCard.scss";
 
-function ProductCard({ product }) {
+function ProductCard({ product, handleClick }) {
   return (
-    <div className="product-container">
+    <div className="product-container" onClick={() => handleClick(product.id)} role="button">
       <div className="product__info">
         <img className="info__img" src={product.image} alt="Product" />
         <p className="info__category">{product.category}</p>
@@ -19,6 +22,7 @@ function ProductCard({ product }) {
         </p>
       </div>
     </div>
+
   );
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import homeActionTypes from "../actions/HomeActions/homeActionTypes";
 
 export default function homeReducer(state = {}, action) {
@@ -10,6 +9,10 @@ export default function homeReducer(state = {}, action) {
     case homeActionTypes.GET_ALL_ITEMS:
       newState = { ...state, items: action.items, loadingItems: false };
       break;
+    case homeActionTypes.GET_ALL_ITEMS_ERROR:
+      newState = { ...state, itemsError: action.error, loadingItems: false };
+      break;
+
     default:
       newState = state;
       break;

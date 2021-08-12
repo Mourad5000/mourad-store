@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -8,7 +9,7 @@ import ProductCard from "../ProductCard/ProductCard";
 
 // import Button from "../../../components/Button/Button";
 
-function HomeProducts() {
+function HomeProducts({ handleClick }) {
   const { items } = useSelector(({ homeReducer }) => homeReducer);
   return (
     <>
@@ -16,7 +17,7 @@ function HomeProducts() {
           items && (
           <div className="products-container">
             {items?.map((item) => (
-              <ProductCard product={item} />
+              <ProductCard key={item.id} product={item} handleClick={handleClick} />
             ))}
           </div>
           )
