@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 // constants
 import errorMesages from "../../constants/errorMesages";
@@ -18,6 +18,7 @@ import { getOneItem } from "../../redux/actions/ProductActions/productActions";
 
 function ProductDetail() {
   const { id } = useParams();
+  const history = useHistory();
   const dispatch = useDispatch();
   const { itemDetail, loadingItem, itemDetailError } = useSelector(
     ({ productReducer }) => productReducer,
@@ -29,6 +30,10 @@ function ProductDetail() {
       dispatch(getOneItem(id));
     }
   }, [itemDetail]);
+
+  function handleBackClick() {
+    history.push("/home");
+  }
 
   return (
     <>
@@ -62,7 +67,7 @@ function ProductDetail() {
                   <Button text="Add to card" />
                 </div>
                 <div className="buttons__button">
-                  <Button text="Go back" isSecondary />
+                  <Button text="Go back" isSecondary onClick={handleBackClick} />
                 </div>
               </div>
             </div>
