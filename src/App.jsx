@@ -9,6 +9,7 @@ import AppWrapper from "./components/AppWrapper/AppWrapper";
 import Home from "./views/Home/Home";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
 import Cart from "./views/Cart/Cart";
+import Sales from "./views/Sales/Sales";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" component={Home} />
           <Route path="/productDetail/:id" component={ProductDetail} />
           <Route path="/myCart" component={Cart} />
+          <Route path="/sales" component={Sales} />
         </AppWrapper>
       </Switch>
     </div>
