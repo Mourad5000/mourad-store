@@ -1,0 +1,6 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+
+.cart-container {
+    @include flex($flex-direction:column)
+}

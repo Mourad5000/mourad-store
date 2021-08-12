@@ -44,3 +44,12 @@
     padding: $p-12;
   }
 }
+
+.detail__info {
+  cursor: pointer;
+  font-size: $text-14;
+  &:hover {
+    color: $light-blue;
+    text-decoration: underline;
+  }
+}
