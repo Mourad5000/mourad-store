@@ -1,0 +1,25 @@
+@import "../../../assets/styles/globalStyles.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.cart-card-container {
+  @include flex($flex-direction: column, $justify-content: center);
+  width: 300px;
+  height: 150px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: $p-16;
+  background-color: $white;
+  margin-bottom: $m-16;
+  @media only screen and (min-width: $desktop-query-1280) {
+    width: 500px;
+  }
+}
+
+.cart-card__title {
+    margin-bottom: $m-8;
+}
+
+.cart-card__button {
+  width: 80%;
+  margin-top: $m-8;
+}

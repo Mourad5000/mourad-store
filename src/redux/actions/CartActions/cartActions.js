@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import cartActionTypes from "./cartActionTypes";
 
 export function addToCart(item) {
@@ -6,7 +7,10 @@ export function addToCart(item) {
     item,
   };
 }
-
-export function useless() {
-  return 1;
+export function deleteFromCart(itemToDelete, cart) {
+  const newitemCart = cart.filter((item) => item.id !== itemToDelete.id);
+  return {
+    type: cartActionTypes.DELETE_ITEM_FROM_CART,
+    newitemCart,
+  };
 }
