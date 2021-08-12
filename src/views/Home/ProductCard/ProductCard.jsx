@@ -22,6 +22,7 @@ function ProductCard({ product, handleClick }) {
         </p>
       </div>
     </div>
+
   );
 }
 

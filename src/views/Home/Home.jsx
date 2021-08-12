@@ -11,7 +11,8 @@ import LoadingError from "../../components/LoadingError/LoadingError";
 import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
-import { getAllItems, getOneItem } from "../../redux/actions/HomeActions/homeActions";
+import { getAllItems } from "../../redux/actions/HomeActions/homeActions";
+import { getOneItem } from "../../redux/actions/ProductActions/productActions";
 
 function Home() {
   const dispatch = useDispatch();

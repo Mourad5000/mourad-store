@@ -33,29 +33,3 @@ export function getAllItems() {
     }
   };
 }
-
-export function getItemSuccess(item) {
-  return {
-    type: homeActionTypes.GET_ITEM_DETAIL,
-    item,
-  };
-}
-
-export function getItemError(error) {
-  return {
-    type: homeActionTypes.GET_ITEM_DETAIL_ERROR,
-    error,
-  };
-}
-
-export function getOneItem(id) {
-  return async (dispatch) => {
-    try {
-      const endPoint = `https://fakestoreapi.com/products/${id}`;
-      const { data } = await axios.get(endPoint);
-      dispatch(getItemSuccess(data));
-    } catch (error) {
-      dispatch(getItemError(error));
-    }
-  };
-}

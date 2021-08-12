@@ -1,28 +1,46 @@
-@import '../../assets/styles/globalStyles.scss';
-@import '../../assets/styles/mixins.scss';
+@import "../../assets/styles/globalStyles.scss";
+@import "../../assets/styles/mixins.scss";
 
 .detail-container {
-    @include flex($flex-direction:column);
+  @include flex($flex-direction: column);
 }
 
 .detail__title {
-    margin-bottom: $m-12;
-    font-size: $text-32;
+  margin-bottom: $m-12;
+  font-size: $text-32;
 }
 
 .detail__img {
-    height: 150px;
-    margin-bottom: $m-12;
-    @media only screen and (min-width:$desktop-query-1280){
-        height: 300px;
-    }
+  height: 150px;
+  margin-bottom: $m-12;
+  @media only screen and (min-width: $desktop-query-1280) {
+    height: 300px;
+  }
 }
 
 .detail__text {
-    font-size: $text-16;
-    margin-bottom: $m-12;
+  font-size: $text-16;
+  margin-bottom: $m-12;
 }
 
 .highlight {
-    color: $light-blue;
+  color: $light-blue;
+  font-weight: bold;
+}
+
+.detail__buttons {
+  @include flex($flex-direction: column);
+  width: 50%;
+  @media only screen and (min-width: $desktop-query-1280) {
+    @include flex($justify-content: space-between);
+  }
+}
+
+.buttons__button {
+  padding: $p-6;
+  width: 100%;
+  @media only screen and (min-width: $desktop-query-1280) {
+    width: 50%;
+    padding: $p-12;
+  }
 }
