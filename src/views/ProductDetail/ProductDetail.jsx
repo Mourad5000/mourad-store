@@ -24,10 +24,11 @@ function ProductDetail() {
   const { id } = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
-  const [isInCart, setIsInCard] = useState(false);
+  const [infoCart, setInfoCart] = useState("");
   const { itemDetail, loadingItem, itemDetailError } = useSelector(
     ({ productReducer }) => productReducer,
   );
+  const { cartItems } = useSelector(({ cartReducer }) => cartReducer);
 
   useEffect(() => {
     if (!itemDetail) {
@@ -41,8 +42,13 @@ function ProductDetail() {
   }
 
   function handleAddToCart() {
-    dispatch(addToCart(itemDetail));
-    setIsInCard(true);
+    const found = cartItems.find((item) => item.id === itemDetail.id);
+    if (found) {
+      setInfoCart("This product is already in the cart, click to see it");
+    } else {
+      dispatch(addToCart(itemDetail));
+      setInfoCart("Product added to cart, click to see it.");
+    }
   }
 
   return (
@@ -77,14 +83,20 @@ function ProductDetail() {
                   <Button text="Add to card" onClick={handleAddToCart} />
                 </div>
                 <div className="buttons__button">
-                  <Button text="Go back" isSecondary onClick={handleBackClick} />
+                  <Button
+                    text="Go back"
+                    isSecondary
+                    onClick={handleBackClick}
+                  />
                 </div>
               </div>
-              {
-                isInCart && (
-                  <p className="detail__info" onClick={() => history.push("/myCart")}>Product added to cart, click to see it.</p>
-                )
-              }
+
+              <p
+                className="detail__info"
+                onClick={() => history.push("/myCart")}
+              >
+                {infoCart}
+              </p>
             </div>
           )}
           {itemDetailError && (
