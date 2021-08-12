@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import AppWrapper from "./components/AppWrapper/AppWrapper";
 import Home from "./views/Home/Home";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
+import Cart from "./views/Cart/Cart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <AppWrapper>
           <Route path="/home" component={Home} />
           <Route path="/productDetail/:id" component={ProductDetail} />
+          <Route path="/myCart" component={Cart} />
         </AppWrapper>
       </Switch>
     </div>

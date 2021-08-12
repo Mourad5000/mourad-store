@@ -8,7 +8,7 @@ import logo from "../../assets/images/logo.png";
 
 const menuItems = [
   { name: "Home", route: "/home" },
-  { name: "Cart", route: "/cart" },
+  { name: "Cart", route: "/myCart" },
   { name: "Sales", route: "/sales" },
 ];
 
