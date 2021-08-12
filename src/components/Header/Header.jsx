@@ -31,7 +31,7 @@ function Header() {
         <img className="header__logo" src={logo} alt="Atlas logo" />
       </div>
       <div className="header-cover">
-        <h1 className="header-cover__title">Welcome to Atlas shop</h1>
+        <h1 className="header-cover__title">Atlas shop</h1>
       </div>
     </header>
   );

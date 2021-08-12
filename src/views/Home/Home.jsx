@@ -18,16 +18,17 @@ function Home() {
   const dispatch = useDispatch();
   const history = useHistory();
   const { items, loadingItems, itemsError } = useSelector(({ homeReducer }) => homeReducer);
+  const { item } = useSelector(({ productReducer }) => productReducer);
+  useEffect(() => {
+    if (!item) {
+      dispatch(deleteItemDetail());
+    }
+  }, [item]);
 
   useEffect(() => {
-    dispatch(deleteItemDetail());
-  });
-
-  useEffect(() => {
-    if (!items) {
+    if (!items && !items?.length) {
       dispatch(getAllItems());
     }
-    // TODO: aqui despintar itemDetail
   }, [items]);
 
   function handleClick(id) {
