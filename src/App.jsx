@@ -10,6 +10,7 @@ import Home from "./views/Home/Home";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
 import Cart from "./views/Cart/Cart";
 import Sales from "./views/Sales/Sales";
+import PageNotFound from "./views/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/myCart" exact component={Cart} />
           <Route path="/sales" exact component={Sales} />
           <Route path="/" exact component={Home} />
-          {/* <Route component={PageNotFound}/> */}
+          <Route component={PageNotFound} />
         </Switch>
       </AppWrapper>
     </div>

@@ -1,0 +1,15 @@
+@import "../../assets/styles/globalStyles.scss";
+@import "../../assets/styles/mixins.scss";
+
+.not-found-container {
+    @include flex($flex-direction:column)
+}
+
+.not-gound__img{
+    height: 300px;
+    margin-bottom: $m-12;
+}
+
+.not-bound__button {
+    width: 50%;
+}

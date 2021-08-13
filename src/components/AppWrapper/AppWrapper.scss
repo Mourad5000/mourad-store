@@ -6,7 +6,8 @@
     position: relative;
     overflow: hidden;
     background-color: $grey;
-    min-height: 100vh;
+    // 350 px is the heigth of the header + cover
+    min-height: calc(100vh - 350px);
     @media only screen and (min-width: $desktop-query-1280) {
         @include flex($align-items:flex-start);
     }
@@ -14,4 +15,25 @@
 
 .app-wrapper {
     max-width:$desktop-query-1280;
+}
+
+.app-wrapper__shoppin-cart{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.shopping-cart__img {
+    height: 45px;
+}
+
+.shopping-cart__number{
+    position: absolute;
+    bottom: 18px;
+    right: 14px;
+    color: #af5b5b;
+    font-weight: bold;
+    font-size: $text-16;
+    z-index: 3;
 }
