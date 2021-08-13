@@ -1,7 +1,10 @@
 /* eslint-disable no-restricted-globals */
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Sales() {
+  const history = useHistory();
+
   return (
     <div className="sales-container">
       <p className="detail__text">We do not have discounted products yet.</p>
