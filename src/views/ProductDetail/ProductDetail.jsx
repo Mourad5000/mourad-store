@@ -8,6 +8,7 @@ import { useParams, useHistory } from "react-router-dom";
 // constants
 import errorMesages from "../../constants/errorMesages";
 
+// scss
 import "./ProductDetail.scss";
 
 // components
@@ -38,7 +39,7 @@ function ProductDetail() {
   }, [itemDetail]);
 
   function handleBackClick() {
-    history.push("/home");
+    history.push("/");
   }
 
   function handleAddToCart() {

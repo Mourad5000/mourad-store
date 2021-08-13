@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from "react";
 
 function Sales() {
@@ -7,6 +8,7 @@ function Sales() {
       <p className="detail__text">
         Soon you will be able to buy great deals 🔥
       </p>
+      <p className="detail__info" onClick={() => history.push("/")}>Click to go back to the catalog</p>
     </div>
   );
 }
