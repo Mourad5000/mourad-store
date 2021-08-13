@@ -21,8 +21,15 @@ export function loadingItem() {
   };
 }
 
+export function deleteItemDetail() {
+  return {
+    type: productActionTypes.DELETE_ITEM_DETAIL,
+  };
+}
+
 export function getOneItem(id) {
   return async (dispatch) => {
+    dispatch(deleteItemDetail());
     try {
       dispatch(loadingItem());
       const endPoint = `https://fakestoreapi.com/products/${id}`;
@@ -31,11 +38,5 @@ export function getOneItem(id) {
     } catch (error) {
       dispatch(getItemError(error));
     }
-  };
-}
-
-export function deleteItemDetail() {
-  return {
-    type: productActionTypes.DELETE_ITEM_DETAIL,
   };
 }

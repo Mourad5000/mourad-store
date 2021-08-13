@@ -7,7 +7,7 @@ import logo from "../../assets/images/logo.png";
 // import cover from "../../assets/images/header-cover-image.jpg";
 
 const menuItems = [
-  { name: "Home", route: "/home" },
+  { name: "Home", route: "" },
   { name: "Cart", route: "/myCart" },
   { name: "Sales", route: "/sales" },
 ];

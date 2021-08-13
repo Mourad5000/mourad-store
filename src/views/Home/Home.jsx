@@ -12,18 +12,12 @@ import HomeProducts from "./HomeProducts/HomeProducts";
 
 // actiontypes
 import { getAllItems } from "../../redux/actions/HomeActions/homeActions";
-import { getOneItem, deleteItemDetail } from "../../redux/actions/ProductActions/productActions";
+import { getOneItem } from "../../redux/actions/ProductActions/productActions";
 
 function Home() {
   const dispatch = useDispatch();
   const history = useHistory();
   const { items, loadingItems, itemsError } = useSelector(({ homeReducer }) => homeReducer);
-  const { item } = useSelector(({ productReducer }) => productReducer);
-  useEffect(() => {
-    if (!item) {
-      dispatch(deleteItemDetail());
-    }
-  }, [item]);
 
   useEffect(() => {
     if (!items && !items?.length) {
@@ -35,6 +29,7 @@ function Home() {
     dispatch(getOneItem(id));
     history.push(`/productDetail/${id}`);
   }
+
   return (
     <>
       {

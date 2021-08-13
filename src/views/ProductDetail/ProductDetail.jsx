@@ -8,6 +8,7 @@ import { useParams, useHistory } from "react-router-dom";
 // constants
 import errorMesages from "../../constants/errorMesages";
 
+// scss
 import "./ProductDetail.scss";
 
 // components
@@ -38,7 +39,7 @@ function ProductDetail() {
   }, [itemDetail]);
 
   function handleBackClick() {
-    history.push("/home");
+    history.push("/");
   }
 
   function handleAddToCart() {
@@ -60,6 +61,9 @@ function ProductDetail() {
         />
       ) : (
         <>
+          {itemDetailError && (
+          <LoadingError text={errorMesages.GET_ONE_ITEM_ERROR} />
+          )}
           {itemDetail && (
             <div className="detail-container">
               <h1 className="detail__title">{itemDetail.title}</h1>
@@ -98,9 +102,6 @@ function ProductDetail() {
                 {infoCart}
               </p>
             </div>
-          )}
-          {itemDetailError && (
-            <LoadingError text={errorMesages.GET_ONE_ITEM_ERROR} />
           )}
         </>
       )}

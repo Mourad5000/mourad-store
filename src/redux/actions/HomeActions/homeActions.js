@@ -14,10 +14,10 @@ export function getAllItemsSucess(items) {
   };
 }
 
-export function getAllItemsError(error) {
+export function getAllItemsError(itemsError) {
   return {
     type: homeActionTypes.GET_ALL_ITEMS_ERROR,
-    error,
+    itemsError,
   };
 }
 
@@ -29,7 +29,7 @@ export function getAllItems() {
       const { data } = await axios.get(endPoint);
       dispatch(getAllItemsSucess(data));
     } catch (error) {
-      dispatch(getAllItemsError(error));
+      dispatch(getAllItemsError(error.message));
     }
   };
 }

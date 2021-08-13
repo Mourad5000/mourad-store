@@ -1,6 +1,4 @@
 /* eslint-disable no-return-assign */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -38,13 +36,13 @@ function Cart() {
           {cartItems?.map((item) => (
             <CartCard item={item} key={item.id} handleClick={handleClick} />
           ))}
-          <p className="detail__info" onClick={() => history.push("/home")}>Continue buying</p>
+          <p className="detail__info" onClick={() => history.push("/")}>Continue buying</p>
 
         </div>
       ) : (
         <div className="cart-container">
           <p className="detail__text">You still don&apos;t have any products yet</p>
-          <p className="detail__info" onClick={() => history.push("/home")}>Click to go back to the catalog</p>
+          <p className="detail__info" onClick={() => history.push("/")}>Click to go back to the catalog</p>
         </div>
 
       )}
