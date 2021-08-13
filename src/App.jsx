@@ -15,14 +15,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Switch>
-        <AppWrapper>
+      <AppWrapper>
+        <Switch>
           <Route path="/productDetail/:id" exact component={ProductDetail} />
           <Route path="/myCart" exact component={Cart} />
           <Route path="/sales" exact component={Sales} />
           <Route path="/" exact component={Home} />
-        </AppWrapper>
-      </Switch>
+          {/* <Route component={PageNotFound}/> */}
+        </Switch>
+      </AppWrapper>
     </div>
   );
 }

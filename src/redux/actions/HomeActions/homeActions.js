@@ -14,10 +14,10 @@ export function getAllItemsSucess(items) {
   };
 }
 
-export function getAllItemsError(error) {
+export function getAllItemsError(itemsError) {
   return {
     type: homeActionTypes.GET_ALL_ITEMS_ERROR,
-    error,
+    itemsError,
   };
 }
 

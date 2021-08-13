@@ -61,6 +61,9 @@ function ProductDetail() {
         />
       ) : (
         <>
+          {itemDetailError && (
+          <LoadingError text={errorMesages.GET_ONE_ITEM_ERROR} />
+          )}
           {itemDetail && (
             <div className="detail-container">
               <h1 className="detail__title">{itemDetail.title}</h1>
@@ -99,9 +102,6 @@ function ProductDetail() {
                 {infoCart}
               </p>
             </div>
-          )}
-          {itemDetailError && (
-            <LoadingError text={errorMesages.GET_ONE_ITEM_ERROR} />
           )}
         </>
       )}

@@ -10,7 +10,7 @@ export default function homeReducer(state = {}, action = { type: null }) {
       newState = { ...state, items: action.items, loadingItems: false };
       break;
     case homeActionTypes.GET_ALL_ITEMS_ERROR:
-      newState = { ...state, itemsError: action.error, loadingItems: false };
+      newState = { ...state, itemsError: action.itemsError, loadingItems: false };
       break;
 
     default:

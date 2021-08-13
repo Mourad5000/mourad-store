@@ -37,9 +37,9 @@ describe("Given a getAllItemsSucess action creator", () => {
 describe("Given a getAllItemsError action creator", () => {
   describe("When is called with an error", () => {
     test("Then should return an action of type GET_ALL_ITEMS_ERROR and the error message", () => {
-      expected = { type: homeActionTypes.GET_ALL_ITEMS_ERROR, error: "some errro msg" };
+      expected = { type: homeActionTypes.GET_ALL_ITEMS_ERROR, itemsError: "some error msg" };
 
-      expect(getAllItemsError("some errro msg")).toEqual(expected);
+      expect(getAllItemsError("some error msg")).toEqual(expected);
     });
   });
 });
