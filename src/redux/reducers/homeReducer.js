@@ -1,6 +1,6 @@
 import homeActionTypes from "../actions/HomeActions/homeActionTypes";
 
-export default function homeReducer(state = {}, action) {
+export default function homeReducer(state = {}, action = { type: null }) {
   let newState = {};
   switch (action.type) {
     case homeActionTypes.GET_ITEMS_LOADING:

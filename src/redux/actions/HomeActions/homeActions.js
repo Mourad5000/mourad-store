@@ -29,7 +29,7 @@ export function getAllItems() {
       const { data } = await axios.get(endPoint);
       dispatch(getAllItemsSucess(data));
     } catch (error) {
-      dispatch(getAllItemsError(error));
+      dispatch(getAllItemsError(error.message));
     }
   };
 }
