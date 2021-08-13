@@ -24,7 +24,8 @@ function AppWrapper({ children }) {
       {
         cartItems.length > 0 && (
         <div className="app-wrapper__shoppin-cart" onClick={handleClickCart} role="button">
-          <img className="shoppin-cart__img" src={shoppingCart} alt="Shopping cart" />
+          <img className="shopping-cart__img" src={shoppingCart} alt="Shopping cart" />
+          <p className="shopping-cart__number">{cartItems.length}</p>
         </div>
         )
       }

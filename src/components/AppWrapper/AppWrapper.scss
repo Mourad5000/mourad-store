@@ -19,11 +19,21 @@
 
 .app-wrapper__shoppin-cart{
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     cursor: pointer;
 }
 
-.shoppin-cart__img {
-    height: 35px;
+.shopping-cart__img {
+    height: 45px;
+}
+
+.shopping-cart__number{
+    position: absolute;
+    bottom: 18px;
+    right: 14px;
+    color: #af5b5b;
+    font-weight: bold;
+    font-size: $text-16;
+    z-index: 3;
 }
